@@ -35,8 +35,6 @@ export async function updateSession(request) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  // TODO: Re-enable after we have login etc configured
-  /*
   // error handle if someone tries to go to pages they're not suposed to, they will be redirected to login
   if (
     !user &&
@@ -48,7 +46,6 @@ export async function updateSession(request) {
     url.pathname = "/login";
     return NextResponse.redirect(url);
   }
-    */
   // return the response
   return supabaseResponse;
 }
