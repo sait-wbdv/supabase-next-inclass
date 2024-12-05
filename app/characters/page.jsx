@@ -4,7 +4,6 @@ export default async function Characters() {
   const supabase = await createClient();
 
   let { data: characters } = await supabase.from("characters").select();
-  console.log(characters);
   return (
     <main>
       <h1>Star Wars Characters!</h1>
