@@ -1,4 +1,4 @@
-import { login /*signup*/ } from "./actions";
+import { login, signup } from "./actions";
 
 export default function LoginPage() {
   return (
@@ -30,7 +30,12 @@ export default function LoginPage() {
       >
         Log in
       </button>
-      {/* <button formAction={signup}>Sign up</button> */}
+      <button
+        formAction={signup}
+        className="bg-green-400 px-4 py-2 rounded-md m-4 w-fit"
+      >
+        Sign up
+      </button>
     </form>
   );
 }
